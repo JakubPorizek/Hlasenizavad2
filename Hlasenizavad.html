@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Aplikace pro hlášení nehod</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Aplikace pro hlášení nehod</h1>
+  <p>Určete jaké oblasti se vaše volba týká:
+    <select id="category" onchange="toggleSubmitButton()">
+      <option value="">--Vyberte--</option>
+      <option value="maintenance">Údržba</option>
+      <option value="security">Bezpečnost</option>
+      <option value="both">Bezpečnost a údržba</option>
+    </select>
+  </p>
+  <textarea id="description" placeholder="Popište závadu..." maxlength="400"></textarea>
+  <!-- Kontejner pro tlačítka, které nyní bude používat Flexbox -->
+<div class="button-container">
+  <input type="button" id="upload-btn" value="Vložit fotografii z foťáku" onclick="uploadImage('camera')">
+  <input type="button" id="file-btn" value="Vložit fotografii z souboru" onclick="document.getElementById('file-upload').click()">
+</div>
+  <label>
+    <input type="checkbox" id="terms-checkbox" onclick="toggleSubmitButton()">
+    Jsem si vědom že aplikace neslouží k nahlašování akutních stavů a dalších <a href="Podmínky použití.pdf" target="_blank" class="terms-link">Podmínek použití</a>.
+  </label>
+  <input type="button" id="submit-btn" value="Odeslat hlášení" disabled="disabled" onclick="submitReport()">
+</div>
+
+</body>
+</html>

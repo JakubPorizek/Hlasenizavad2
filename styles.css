@@ -1,0 +1,140 @@
+/* Přidání obecnějších stylů pro vzhled tlačítek */
+input[type="button"] {
+    background-color: #0044cc; /* modrá barva tlačítka */
+    color: white; /* barva textu na tlačítku */
+    border: none; /* odstranění ohraničení tlačítka */
+    padding: 10px 20px; /* velikost tlačítka (vnitřní odsazení) */
+    border-radius: 5px; /* zaoblené rohy tlačítka */
+    cursor: pointer; /* kurzor se změní na "prst" když je nad tlačítkem */
+    transition: background-color 0.3s; /* animace pro změnu barvy */
+  }
+  
+  input[type="button"]:hover {
+    background-color: #003399; /* ztmavení barvy tlačítka při najetí */
+  }
+  
+  /* Specifické styly pro tlačítko 'file-upload', které je skryté a spolupracuje s 'file-btn' */
+  #file-upload {
+    display: none;
+  }
+  
+  /* Specifické styly pro tlačítko 'submit-btn', které může být neaktivní */
+  #submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#submit-btn:disabled::before {
+  content: "abcd";
+  display: block;
+  text-align: center;
+  margin-top: -20px; /* upravte podle potřeby */
+  position: absolute;
+  width: 100%;
+
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Základní styl */
+body, input, select, textarea, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px; /* Max šířka containeru, aby odpovídal šířce tlačítek */
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  color: #0056b3; /* modrá barva textu */
+  font-weight: 700; /* tučné písmo */
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%; /* plná šířka */
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* Flexbox kontejner pro tlačítka */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* rovnoměrně rozmístí tlačítka */
+  margin-bottom: 20px;
+}
+
+/* Styly pro obě tlačítka */
+input[type="button"] {
+  flex: 1; /* obě tlačítka budou mít stejnou velikost */
+  margin: 0 10px; /* okraje kolem tlačítek */
+  padding: 10px 0; /* vertikální padding */
+  background-color: #0044cc; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+  background-color: #003399;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  text-align: left; /* zarovnání textu */
+  margin: auto;
+  max-width: 480px; /* stejná šířka jako container a textové pole */
+}
+
+/* Styl pro tlačítko "Vložit fotku" */
+input#upload-btn {
+    flex: 1; 
+    margin: 0 10px;
+    padding: 10px 20px; /* Upravení paddingu na stejnou hodnotu jako ostatní tlačítka */
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif; /* Použití stejného moderního fontu */
+  }
+  
+  input#upload-btn:hover {
+    background-color: #003399;
+  }
+
+/* Styly pro tlačítko 'Odeslat hlášení' */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+#file-upload {
+  display: none; /* skryje input pro soubory, ale může být aktivován kliknutím na tlačítko */
+}
+
+/* Zbytek stylů ... */
